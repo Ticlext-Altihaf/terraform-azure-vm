@@ -13,3 +13,8 @@ output "instance_name" {
 output "url" {
   value = "http://${azurerm_linux_virtual_machine.example.public_ip_address}"
 }
+
+output "ssh_command" {
+  value = "ssh ${azurerm_linux_virtual_machine.example.admin_username}@${azurerm_linux_virtual_machine.example.public_ip_address}"
+  
+}
